@@ -459,6 +459,14 @@ Flags: `--tool-call-parser pythonic --chat-template {see_above}`
 !!! warning
     Llama's smaller models frequently fail to emit tool calls in the correct format. Results may vary depending on the model.
 
+### Trinity Models (`trinity`)
+
+Trinity models emit Qwen-style tool calls wrapped in `<tool_call>` tags and may
+place those tool calls inside `<think>` blocks. The Trinity parser strips the
+think tags before parsing.
+
+Flags: `--tool-call-parser trinity`
+
 ## How to Write a Tool Parser Plugin
 
 A tool parser plugin is a Python file containing one or more ToolParser implementations. You can write a ToolParser similar to the `Hermes2ProToolParser` in [vllm/tool_parsers/hermes_tool_parser.py](../../vllm/tool_parsers/hermes_tool_parser.py).

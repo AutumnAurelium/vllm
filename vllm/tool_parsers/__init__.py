@@ -146,6 +146,10 @@ _TOOL_PARSERS_TO_REGISTER = {
         "functiongemma_tool_parser",
         "FunctionGemmaToolParser",
     ),
+    "trinity": (
+        "trinity_tool_parser",
+        "TrinityToolParser",
+    ),
 }
 
 
