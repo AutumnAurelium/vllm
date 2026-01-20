@@ -461,9 +461,14 @@ Flags: `--tool-call-parser pythonic --chat-template {see_above}`
 
 ### Trinity Models (`trinity`)
 
-Trinity models emit Qwen-style tool calls wrapped in `<tool_call>` tags and may
+Arcee Trinity models emit Qwen-style tool calls wrapped in `<tool_call>` tags and may
 place those tool calls inside `<think>` blocks. The Trinity parser strips the
 think tags before parsing.
+
+Supported models:
+
+- `arcee-ai/Trinity-Large-Preview`
+- `arcee-ai/Trinity-Mini`
 
 Flags: `--tool-call-parser trinity`
 
